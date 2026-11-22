@@ -1,0 +1,21 @@
+# Indus Agent Environment Variables & Secrets
+# Copy this file to .dev.vars for local development with `wrangler dev`
+
+# 1. OpenRouter API Key (Required for AI responses)
+# Get your API key at https://openrouter.ai/keys
+OPENROUTER_API_KEY=your_openrouter_api_key_here
+
+# 2. Google OAuth 2.0 Credentials (Required for Google Login)
+# Create OAuth credentials at https://console.cloud.google.com/apis/credentials
+# Authorized Javascript Origins:
+#   - http://localhost:8787 (for local dev)
+#   - https://indus-agent.<your-subdomain>.workers.dev (for production)
+# Authorized Redirect URIs:
+#   - http://localhost:8787/api/auth/google/callback (for local dev)
+#   - https://indus-agent.<your-subdomain>.workers.dev/api/auth/google/callback (for production)
+GOOGLE_CLIENT_ID=your_google_client_id.apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET=your_google_client_secret_here
+
+# 3. Optional Application URL override (e.g. http://localhost:8787)
+# If omitted, it automatically detects the incoming request's origin
+APP_URL=http://localhost:8787

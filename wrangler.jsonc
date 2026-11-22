@@ -1,0 +1,24 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "indus-agent",
+  "main": "worker/index.js",
+  "compatibility_date": "2024-11-01",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "indus-agent-db",
+      "database_id": "7472861f-e167-4028-8d5d-a52aaa0050c8"
+    }
+  ],
+  "vars": {
+    "APP_NAME": "Indus Agent",
+    "DEFAULT_MODEL": "meta-llama/llama-3.3-70b-instruct"
+  }
+}

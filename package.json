@@ -1,0 +1,27 @@
+{
+  "name": "indus-agent",
+  "version": "1.0.0",
+  "description": "Indus Agent - ChatGPT Web Clone powered by Cloudflare Pages/Worker, Cloudflare D1, Google OAuth, and OpenRouter API",
+  "main": "worker/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:migrate:local": "wrangler d1 execute indus-agent-db --local --file=./schema.sql",
+    "db:migrate:remote": "wrangler d1 execute indus-agent-db --remote --file=./schema.sql"
+  },
+  "keywords": [
+    "chatgpt",
+    "indus-agent",
+    "cloudflare",
+    "cloudflare-workers",
+    "cloudflare-d1",
+    "openrouter",
+    "google-oauth"
+  ],
+  "author": "Indus Agent Team",
+  "license": "MIT",
+  "devDependencies": {
+    "wrangler": "^3.109.2"
+  }
+}
